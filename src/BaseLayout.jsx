@@ -15,7 +15,7 @@ export default class BaseLayout extends Component {
             <Navbar.Brand href="/">DPU</Navbar.Brand>
             <Nav className="me-auto">
               <Nav.Link href="/report">Home</Nav.Link>
-              <Nav.Link href="/product">Products</Nav.Link>
+              <Nav.Link href="/product">Cars</Nav.Link>
             </Nav>
             <div style={{ color: "white" }}></div>
           </Container>

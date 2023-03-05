@@ -1,6 +1,6 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import React, { Component } from "react";
-import Form from "react-bootstrap/Form";
+// import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Card from "react-bootstrap/Card";
@@ -53,30 +53,17 @@ export default class report extends Component {
     this.getData();
   }
   render() {
-    const { district } = this.state;
     return (
       <div>
         <Row>
           <Col lg="9">
             <div align="left">
               <h3>
-                อำเภอ <u>{this.state.amphur_name}</u> จังหวัด{" "}
-                <u>
-                  {this.state.province_name} {this.state.zipcode}
-                </u>
+                รายชื่อสมาชิก 
               </h3>
             </div>
           </Col>
           <Col lg="3">
-            <Form.Group>
-              <Form.Control
-                type="text"
-                placeholder="ระบุเลขไปรษณีย์ 5 หลัก"
-                onChange={this.filter}
-                onKeyUp={this.filter}
-                maxLength="5"
-              />
-            </Form.Group>
           </Col>
         </Row>
 
@@ -86,19 +73,34 @@ export default class report extends Component {
               <Table striped bordered hover>
                 <thead>
                   <tr>
-                    <th>#</th>
-                    <th>รหัสตำบล</th>
-                    <th>ตำบล</th>
+                    <th>รหัสนักศึกษา</th>
+                    <th>ชื่อ</th>
+                    <th>นามสกุล</th>
                   </tr>
                 </thead>
                 <tbody>
-                  {district?.map((rs, index) => (
-                    <tr key={index}>
-                      <td align="center">{index + 1}</td>
-                      <td>{rs.district_code}</td>
-                      <td>{rs.district_name}</td>
+                  
+                    <tr>
+                      <td align="center">65130835</td>
+                      <td>ศักดิเมธ</td>
+                      <td>ขจรฤทธิ์เดช</td>
                     </tr>
-                  ))}
+                    <tr>
+                      <td align="center">65130413</td>
+                      <td>จิตบุณย์</td>
+                      <td>สัคคะนายก</td>
+                    </tr>
+                    <tr>
+                      <td align="center">65130093</td>
+                      <td>ภัทรพงษ์</td>
+                      <td>มีนุชนาถ</td>
+                    </tr>
+                    <tr>
+                      <td align="center">65130457</td>
+                      <td>ฐปกร</td>
+                      <td>ลิขิตนภาเวทย์</td>
+                    </tr>
+                 
                 </tbody>
               </Table>
             </Card.Body>
